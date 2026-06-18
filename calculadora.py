@@ -10,7 +10,8 @@ class Calculadora:
         self.root.resizable(False, False)
 
         try:
-            self.root.iconbitmap("icono.ico")
+            icono = tk.PhotoImage(file="img/icono.png")
+            self.root.iconphoto(True, icono)
         except:
             pass
 
