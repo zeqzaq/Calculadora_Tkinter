@@ -5,7 +5,7 @@ class Calculadora:
     def __init__(self, root):
         self.root = root
         self.root.title("Calculadora Tkinter")
-        self.root.geometry("400x350")
+        self.root.geometry("640x500")
         self.root.configure(bg="#2E4053")
         self.root.resizable(False, False)
 
@@ -39,7 +39,7 @@ class Calculadora:
 
         self.crear_boton(marco_botones, "+", self.sumar, 0, 0)
         self.crear_boton(marco_botones, "-", self.restar, 0, 1)
-        self.crear_boton(marco_botones, "×", self.multiplicar, 0, 2)
+        self.crear_boton(marco_botones, "x", self.multiplicar, 0, 2)
         self.crear_boton(marco_botones, "÷", self.dividir, 0, 3)
         self.crear_boton(marco_botones, "Limpiar", self.limpiar, 1, 0, 4)
 
@@ -82,7 +82,7 @@ class Calculadora:
     def multiplicar(self):
         a, b = self.obtener_numeros()
         if a is not None:
-            self.mostrar_resultado(f"{a} × {b} = {a * b}")
+            self.mostrar_resultado(f"{a} x {b} = {a * b}")
 
     def dividir(self):
         a, b = self.obtener_numeros()
